@@ -1,6 +1,6 @@
 Sequential prompter for Google's Gemini.  Accepts prompts in .json format, stores in responses.json.  Also includes a json to .txt converter for all saved response .jsons in prompts+responses folder.
 
-###To be added:
+### To be added:
 Saving output responses to sequential, timestamped files.
 
 
