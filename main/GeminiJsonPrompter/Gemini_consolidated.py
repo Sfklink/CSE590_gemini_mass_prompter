@@ -41,7 +41,7 @@ class Gemini:
             with open(input_json_path, 'r') as infile:
                 data = json.load(infile)
 
-            # Accepts either a list of prompts or a dict {label: prompt}
+            # accepts either a list of prompts or a dict {label: prompt}
             if isinstance(data, list):
                 prompts = {f"prompt_{i+1}": prompt for i, prompt in enumerate(data)}
             elif isinstance(data, dict):
@@ -70,8 +70,13 @@ class Gemini:
         except Exception as e:
             raise RuntimeError(f"Error processing prompts from JSON: {e}")
 
+"""
+project_id must correspond to an existing google colab project id, otherwise default credentials will not be found.
+To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+"""
+
 if __name__ == "__main__":
-    project_id = 'animated-bonsai-463100-i2'
+    project_id = #############
     location = 'us-central1'
     model_name = 'gemini-2.5-flash-preview-04-17'
 
@@ -83,12 +88,13 @@ if __name__ == "__main__":
     gemini.start_chat()
 
     #print(gemini.call('I previously sent this message:  I''m using the CLI version to contact you, are there any interesting features I can use to enhance my communication with you?'))
-    #this will only handle the inputs in prompts.json, if desired, could expand our loop with a for items in ./prompts+responses
+
+    #this will only handle the inputs in prompts.json, if desired, could expand with a for loop for items in ./prompts+responses
     gemini.process_prompts_from_json(input_file, output_file, use_chat=True)
 
 
 
-
+"""Big ugly testing block below.  Don't worry about it."""
 # gemini.call('Hello Gemini, is everything okay? This is a test for temperature parameter.',
 #             generation_config={'temperature': 0.7})
 #
