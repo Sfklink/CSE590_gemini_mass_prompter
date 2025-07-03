@@ -4,4 +4,5 @@ Sequential prompter for Google's Gemini.  Accepts prompts in .json format, store
 Saving output responses to sequential, timestamped files.
 
 
-### Do note that the prompts contained within the files were designed with the express goal of receiving a response containing somewhat dangerous or objectionable content, as a test of possible jailbreaks on the model.
+### Do note that some of the prompts contained within the files were designed with the express goal of receiving a response containing somewhat dangerous or objectionable content, as a test of possible jailbreaks on the model.  These do not reflect my values or beliefs.
+
